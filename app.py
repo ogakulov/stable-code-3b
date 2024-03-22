@@ -3,6 +3,7 @@ import argparse
 import os
 import json
 from threading import Thread
+import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
 
 MAX_MAX_NEW_TOKENS = 4096
