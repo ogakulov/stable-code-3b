@@ -57,8 +57,8 @@ def predict(message, history, system_prompt, temperature, max_tokens):
 
 if __name__ == "__main__":
     args = parse_args()
-    tokenizer = AutoTokenizer.from_pretrained("stabilityai/stable-code-instruct-3b", use_auth_token=os.environ['TOKEN'])
-    model = AutoModelForCausalLM.from_pretrained("stabilityai/stable-code-instruct-3b", use_auth_token=os.environ['TOKEN'])
+    tokenizer = AutoTokenizer.from_pretrained("stabilityai/stable-code-instruct-3b", use_auth_token=os.environ['HUGGING_FACE_HUB_TOKEN'])
+    model = AutoModelForCausalLM.from_pretrained("stabilityai/stable-code-instruct-3b", use_auth_token=os.environ['HUGGING_FACE_HUB_TOKEN'])
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
     gr.ChatInterface(
