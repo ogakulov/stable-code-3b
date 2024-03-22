@@ -2,13 +2,11 @@ import gradio as gr
 import argparse
 import os
 import json
+from threading import Thread
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
 
 MAX_MAX_NEW_TOKENS = 4096
 DEFAULT_MAX_NEW_TOKENS = 1024
-
-from threading import Thread
-
 
 
 def parse_args():
