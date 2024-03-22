@@ -1,6 +1,11 @@
 import gradio as gr
 import argparse
 import os
+
+#hack install gradio
+os.system("pip uninstall -y gradio")
+os.system("pip install gradio==3.50.2")
+
 import json
 from threading import Thread
 import torch
