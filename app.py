@@ -59,6 +59,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("stabilityai/stable-code-instruct-3b")
     model = AutoModelForCausalLM.from_pretrained("stabilityai/stable-code-instruct-3b")
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = model.half()
     model = model.to(device)
     gr.ChatInterface(
         predict,
