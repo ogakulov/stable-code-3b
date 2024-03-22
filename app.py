@@ -29,7 +29,7 @@ def predict(message, history, system_prompt, temperature, max_tokens):
     instruction += '\n<|im_start|>user\n' + message + '\n<|im_end|>\n<|im_start|>assistant\n'
     problem = [instruction]
     stop_tokens = ["<|endoftext|>", "<|im_end|>"]
-    streamer = TextIteratorStreamer(tokenizer, timeout=10.0, skip_prompt=True, skip_special_tokens=True)
+    streamer = TextIteratorStreamer(tokenizer, timeout=100.0, skip_prompt=True, skip_special_tokens=True)
     enc = tokenizer(problem, return_tensors="pt", padding=True, truncation=True)
     input_ids = enc.input_ids
     attention_mask = enc.attention_mask
