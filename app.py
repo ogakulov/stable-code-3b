@@ -5,7 +5,7 @@ import os
 
 #hack install gradio
 os.system("pip uninstall -y gradio")
-os.system("pip install gradio==3.50.2")
+os.system("pip install gradio==4.23.0")
 import gradio as gr
 
 import json
