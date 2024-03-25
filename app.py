@@ -1,6 +1,6 @@
 import argparse
 import os
-import spaces
+#import spaces
 
 
 #hack install gradio
@@ -23,7 +23,7 @@ def parse_args():
     parser.add_argument("--n_gpus", type=int, default=1)  # n_gpu
     return parser.parse_args()
 
-@spaces.GPU()
+#@spaces.GPU()
 def predict(message, history, system_prompt, temperature, max_tokens):
     global model, tokenizer, device
     instruction = "<|im_start|>system\nA chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions.\n<|im_end|>\n"
