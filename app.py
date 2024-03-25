@@ -11,7 +11,7 @@ from threading import Thread
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
 
-MAX_MAX_NEW_TOKENS = 4096
+MAX_LENGTH = 4096
 DEFAULT_MAX_NEW_TOKENS = 1024
 
 
@@ -34,8 +34,8 @@ def predict(message, history, system_prompt, temperature, max_tokens):
     input_ids = enc.input_ids
     attention_mask = enc.attention_mask
 
-    if input_ids.shape[1] > MAX_MAX_NEW_TOKENS:
-        input_ids = input_ids[:, -MAX_MAX_NEW_TOKENS:]
+    if input_ids.shape[1] > MAX_LENGTH:
+        input_ids = input_ids[:, -MAX_LENGTH:]
 
     input_ids = input_ids.to(device)
     attention_mask = attention_mask.to(device)
