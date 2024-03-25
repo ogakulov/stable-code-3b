@@ -1,5 +1,5 @@
 gradio==4.23.0
-gradio_client==0.6.1
+gradio_client
 transformers==4.38.2
 tiktoken
 torch
