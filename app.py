@@ -3,9 +3,6 @@ import os
 #import spaces
 
 
-#hack install gradio
-os.system("pip uninstall -y gradio")
-os.system("pip install gradio==3.50.2")
 import gradio as gr
 
 import json
@@ -55,9 +52,9 @@ def predict(message, history, system_prompt, temperature, max_tokens):
     outputs = []
     for text in streamer:
         outputs.append(text)
-        print(text)
         if text in stop_tokens:
             break
+        print(text)
         yield "".join(outputs)
 
 
