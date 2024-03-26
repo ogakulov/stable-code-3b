@@ -70,7 +70,7 @@ if __name__ == "__main__":
         title="Stable Code Instruct Chat - Demo",
         description="Chat Model Stable Code 3B",
         theme="soft",
-        chatbot=gr.Chatbot(height=1400, label="Chat History",),
+        chatbot=gr.Chatbot(label="Chat History",),
         textbox=gr.Textbox(placeholder="input", container=False, scale=7),
         retry_btn=None,
         undo_btn="Delete Previous",
