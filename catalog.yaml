@@ -5,7 +5,7 @@ entries:
      label: stable-code
      short_description: Install dependencies and launch UI app with Stable Code 3B model
      long_description: Install dependencies and launch UI app with Stable Code 3B model
-     image_path: https://raw.githubusercontent.com/ogakulv/code_img.jpg
+     image_path: https://raw.githubusercontent.com/ogakulov/stable-code-3b/master/images/code_img.jpg
      tags:
       - Stable Code 3B
       - Code LLM
