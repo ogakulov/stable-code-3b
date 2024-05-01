@@ -1,0 +1,1 @@
+!GRADIO_SERVER_PORT=$CDSW_APP_PORT python3 app.py

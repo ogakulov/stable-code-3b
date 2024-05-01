@@ -1,0 +1,42 @@
+  name: stable code 3B
+  description: undefined
+  author: HuggingFace Space
+  specification_version: 1.0
+  prototype_version: 1.0
+
+  environment_variables:
+    cpu:
+      default: 2
+      description: "Number of CPU Workers with minimum value of 2"
+    memory:
+      default: 16
+      description: "Minumum value of 8 is needed"
+    gpu:
+      default: 0
+      description: "Number of GPU Workers"
+  runtimes:
+    - editor: PBJ Workbench
+      kernel: Python 3.10
+      edition: Standard
+
+  tasks:
+    - type: run_session
+      name: Install Dependencies
+      script: .cml_dependencies_script_001.py
+      kernel: python3
+      cpu: 2
+      memory: 16
+      gpu: 0
+
+    - type: start_application
+      name: Application to serve UI
+      short_summary: Create an application to serve the UI
+      subdomain: cml-space
+      script: .cml_space_launcher_001.py
+      cpu: 2
+      memory: 16
+      gpu: 0
+      environment_variables:
+        TASK_TYPE: START_APPLICATION
+        CDSW_HF_SPACE: true
+        GRADIO_SERVER_PORT: 8100
