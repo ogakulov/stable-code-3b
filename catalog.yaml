@@ -8,9 +8,9 @@ entries:
      Install dependencies and launch UI app with Stable Code 3B model
      image_path: >-
       https://raw.githubusercontent.com/ogakulv/code_img.jpg
-    tags:
+     tags:
       - Stable Code 3B
       - Code LLM
       - No GPU
-    git_url: "https://github.com/ogakulov/stable-code-3b"
-    is_prototype: true
+     git_url: "https://github.com/ogakulov/stable-code-3b"
+     is_prototype: true
